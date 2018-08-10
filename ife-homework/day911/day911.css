@@ -280,11 +280,66 @@ section#background2 {
 #crew #imgwrap {
   margin-left: 14%;
   margin-top: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-#imgwrap img {
-  margin: 20px;
+#imgwrap div {
+  margin: 10px;
+  width: 450px;
+  height: 340px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: scroll;
 }
+
+#imgwrap div:nth-child(1)>h2 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 23%;
+  font-weight: lighter;
+  visibility: hidden;
+}
+
+#imgwrap div:nth-child(1)>p {
+  font-size: 10px;
+  visibility: hidden;
+}
+
+#imgwrap div:nth-child(1)>img {
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 5%;
+  visibility: hidden;
+}
+
+#imgwrap div:nth-child(1) {
+  background-image: url('images/person1.png');
+}
+
+#imgwrap div:nth-child(2) {
+  background-image: url('images/person2.png');
+}
+
+#imgwrap div:nth-child(3) {
+  background-image: url('images/person3.png');
+}
+
+#imgwrap div:nth-child(4) {
+  background-image: url('images/person4.png');
+}
+
+#imgwrap div:nth-child(1):hover  *{
+  visibility: visible;
+}
+
+#imgwrap div:nth-child(1):hover  {
+  background-image: url('images/person11.png');
+}
+
 
 #email {
   width: 100%;
@@ -378,79 +433,93 @@ section#background2 {
   list-style-image: url('images/mail.png');
 }
 
-footer{
-    height:500px;
-    background-color: rgb(20,20,20);;
-
-}
-footer #flexwrap{
-    display:flex;
-    width:50%;
-    height: 70%;
-    margin-left: 20%;
-}
-footer #flexwrap ul{
-    flex:1;
-}
-footer li{
-    color:rgba(255, 252, 252, 0.5);
-    text-decoration: none;
-    margin-top: 10%;
+footer {
+  height: 500px;
+  background-color: rgb(20, 20, 20);
+  ;
 }
 
-
-footer  ul {
-    list-style-type:none;
-}
-footer  h1{
-    color:rgba(255, 252, 252, 1);
-   font-size:1.3em;
-}
-footer #flexwrap h1{
-    padding-top: 30%;
+footer #flexwrap {
+  display: flex;
+  width: 50%;
+  height: 70%;
+  margin-left: 20%;
 }
 
-footer a{
-    text-decoration: none;
-    color:rgba(255, 252, 252, 0.5);
+footer #flexwrap ul {
+  flex: 1;
 }
+
+footer li {
+  color: rgba(255, 252, 252, 0.5);
+  text-decoration: none;
+  margin-top: 10%;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer h1 {
+  color: rgba(255, 252, 252, 1);
+  font-size: 1.3em;
+}
+
+footer #flexwrap h1 {
+  padding-top: 30%;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgba(255, 252, 252, 0.5);
+}
+
 footer #enjoy {
-    float: right;
-    margin-top: -21.01%;
-    margin-right: 3%;
+  float: right;
+  margin-top: -21.01%;
+  margin-right: 3%;
 }
-footer #enjoy p{
-    display: block;
-    width:75%;
+
+footer #enjoy p {
+  display: block;
+  width: 75%;
 }
-footer button{
-    width:30px;
-    height:30px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border:1px solid rgb(20,20,20);
+
+footer button {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 1px solid rgb(20, 20, 20);
 }
-footer #twitter{
-    background-image: url("images/twitter.png");
+
+footer #twitter {
+  background-image: url("images/twitter.png");
 }
-footer #facebook{
-    background-image: url("images/facebook.png");
+
+footer #facebook {
+  background-image: url("images/facebook.png");
 }
-footer #google{
-    background-image: url("images/google.png");
+
+footer #google {
+  background-image: url("images/google.png");
 }
-footer #tumbler{
-    background-image: url("images/tumbler.png");
+
+footer #tumbler {
+  background-image: url("images/tumbler.png");
 }
-footer #pinterest{
-    background-image: url("images/pinterest.png");
+
+footer #pinterest {
+  background-image: url("images/pinterest.png");
 }
-footer #linkedin{
-    background-image: url("images/linkedin.png");
+
+footer #linkedin {
+  background-image: url("images/linkedin.png");
 }
-footer #buttonwrap{
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-around;
-    width:60%;
+
+footer #buttonwrap {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
 }

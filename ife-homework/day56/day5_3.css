@@ -1,0 +1,74 @@
+html, body {
+  margin: 0;
+}
+
+h1 {
+  background-color: #858585;
+  margin: 0;
+}
+
+.left {
+  float: left;
+  background-color: #d6d6d6;
+  padding: 20px;
+  border: 0px;
+  margin-top: 0px;
+  height: 70px;
+  font-size: 16px;
+  margin-bottom: 1px;
+}
+
+.right {
+    margin: 0;
+    height: 113px;
+}
+
+.clearfix {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+header dt {
+  font-weight: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+  display: inline;
+}
+
+header dd {
+  font-weight: 16px;
+  margin: 0;
+  display: inline;
+  weight: 90%;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+main dt {
+  font-weight: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+  display: inline;
+}
+#info{
+  height: 20%
+}
+
+main dd {
+  line-height: 1.5;
+  margin-left: 10px;
+  display: inline;
+}
+
+main dd::after {
+  content: "\0A";
+  white-space: pre;
+}
+
+#contact, #skill, #edu, #project {
+  clear: both;
+}

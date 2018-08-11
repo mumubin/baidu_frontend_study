@@ -1,0 +1,29 @@
+header dt {
+  font-weight:16px;
+  font-weight: bold;
+  margin-left: 10px;
+  float:left;
+}
+header dd {
+  font-weight:16px;
+  margin: 0;
+  float: left;
+  margin-right:10px;
+  margin-left:10px;
+  margin-bottom:20px;
+}
+h2{
+  line-height: 1.5;
+  clear:both;
+}
+
+main dt{
+    font-weight:16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+main dd{
+    line-height: 1.5;
+    margin-left: 10px;
+}

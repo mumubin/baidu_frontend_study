@@ -1,0 +1,61 @@
+html, body {
+  margin: 0;
+}
+html {
+  margin:0;
+  height:100%;
+}
+body {
+  height:100%;
+}
+
+.big-left {
+    float: left;
+    background-color: #68a5fa;
+    height: 100%;
+    width: 10%;
+    border: 25px solid #68a5fa;
+    padding: 25px;
+    margin: 6px;
+    font-size: 40px;
+    color: white;
+}
+header dt {
+  font-weight:16px;
+  font-weight: bold;
+  margin-left: 10px;
+  display: inline;
+}
+header dd {
+  font-weight:16px;
+  margin: 0;
+  display: inline;
+  weight:90%;
+  margin-right:10px;
+  margin-left:10px;
+  margin-bottom:20px;
+}
+header dd:last-child::after{
+  content:"\0A";
+  white-space:pre;
+
+}
+h2 {
+  line-height: 1.5;
+  clear:right;
+}
+
+main dt {
+    font-weight:16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+dl {
+  clear:right;
+}
+
+
+main dd {
+    line-height: 1.5;
+    margin-left: 10px;
+}

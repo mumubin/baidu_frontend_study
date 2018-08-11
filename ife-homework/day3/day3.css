@@ -1,0 +1,23 @@
+dl {
+  background-color: green;
+}
+
+dd {
+  font-size: 9px;
+  font-style: italic;
+  font-family: "Trebuchet MS", Verdana, sans-serif, arial;
+  text-shadow: 4px 4px 5px yellow;
+  font-weight: bold;
+  text-indent: 20px;
+  line-height: 1.5;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  text-decoration: line-through;
+}
+
+[datetime="2011.09"] {
+  color: white;
+}

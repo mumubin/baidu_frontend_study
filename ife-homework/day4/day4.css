@@ -1,0 +1,61 @@
+h2 {
+  width: 300px;
+  padding: 20px;
+  margin: 10px auto;
+  line-height: 3;
+  background-color: #f66;
+  text-align: center;
+  /* border-related properties */
+  border: 20px solid black;
+  background-clip: padding-box;
+  border-image-source: url(https://mdn.mozillademos.org/files/13060/border-image.png);
+  border-image-slice: 40;
+  border-image-repeat: round;
+}
+
+dl {
+  background-color: green;
+  background-image: url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png);
+  background-repeat: no-repeat;
+  background-position: 200px 25px； background-attachment:scroll;
+  background-size: 99px 99px;
+}
+
+dd {
+  font-size: 9px;
+  font-style: italic;
+  font-family: "Trebuchet MS", Verdana, sans-serif, arial;
+  text-shadow: 4px 4px 5px yellow;
+  font-weight: bold;
+  text-indent: 20px;
+  line-height: 1.5;
+}
+
+ul>li:nth-child(1) {
+  background: url(image.png) no-repeat 99% center, url(background-tile.png), linear-gradient(to bottom, red, #dddd00 50%, orange);
+  background-color: red;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  text-decoration: line-through;
+}
+
+[datetime="2011.09"] {
+  color: white;
+}
+
+p {
+  font-family: sans-serif;
+  padding: 20px;
+  /* background properties */
+  background-color: yellow;
+  background-image: linear-gradient(to bottom, yellow, #dddd00 50%, orange);
+}
+
+ul {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+  list-style-image: url(https://mdn.mozillademos.org/files/12956/image-bullets.png);
+}

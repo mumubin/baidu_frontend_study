@@ -1,0 +1,32 @@
+### 第十六天，开始感受JS的乐趣？
+
+|日期|总用时|学习目标|
+|--|--|
+|2018.08.11| 4h|JavaScript入门|
+
+### 学习目标
+- 做好预备奔跑的姿势
+- 开始爱上前端
+- 大概知道什么是Web，什么是HTML，CSS，JavaScript，如果您之前就知道，不妨可以做一些深入阅读
+
+### 学习内容
+- [第一天：为什么有那么多人要做前端？](http://ife.baidu.com/course/detail/id/28)
+- [MDN Web开发入门](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web)
+### 学习笔记
+- 开始做笔记，算是准备好奔跑的姿势了吗
+- 一直想学，终于实践，希望算是爱上前端的表现
+- 什么是Web？
+  通过浏览器可以访问到的服务，主要分为后端和前端，后端处理数据，前端处理与人交互。
+- 什么是HTML，CSS，JavaScript？
+  HTML，负责内容。
+  CSS，负责样式。
+  JavaScript,负责交互（动态化）。
+
+
+### 待深入的知识
+[《JavaScript 高级程序设计》](https://book.douban.com/subject/10546125/)
+[跨平台测试](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
+### 疑问
+
+### Flag
+系统的学习前端，坚持66天

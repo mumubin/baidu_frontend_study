@@ -3,12 +3,12 @@
   margin: 0;
 }
 
-body,html{
+body, html {
   width: 100%;
   height: 100%;
 }
 
-body{
+body {
   display: flex;
 }
 
@@ -21,18 +21,94 @@ body{
 }
 
 #menu1 img {
-    margin-left: 23%;
-    margin-top: 24%;
+  margin-left: 23%;
+  margin-top: 24%;
 }
 
 #menu1 img:nth-child(4) {
-    width: 60px;
-    height: 60px;
-    border-color: #1D2531;
+  width: 60px;
+  height: 60px;
+  border-color: #1D2531;
+}
+/* 怎样相对于浏览器左下角？ */
+#menu1 img#grid {
+    position: fixed;
+    margin: 0;
+    border: 0;
+    left: 21px;
+    bottom: 21px;
 }
 
-#menu1 img:nth-child(5), img:nth-child(6) {
+#menu1 img:nth-child(6) {
+    position: fixed;
+    margin: 0;
+    border: 0;
+    left: 55px;
+    bottom: 21px;
+}
+
+#menu2 {
+  width: 250px;
+  background-color: #222C36;
+}
+
+#menu2 ul>li {
+  list-style-type: none;
+}
+
+#top p:nth-child(1), #product p:nth-child(1), #dashboard>p:nth-child(1) {
+  font-size: 0.8em;
+  font-weight: lighter;
+  margin-top: 16%;
+}
+
+#top p, #product p, #dashboard p {
+  margin-top: 5%;
+  color: rgba(183, 192, 205, 1);
+}
+
+#menu2 #top img, #product>img, #dashboard>img {
+  float: right;
+  margin-top: -10%;
+}
+
+#top, #product, #dashboard {
+  border-bottom: 0.0625em solid rgba(255, 252, 252, 0.25);
+  padding-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#dashboard div img {
+    float: right;
     position: relative;
-    top: 48%;
-    left: -4%;
+    margin-top: -11%;
+}
+#product div>p {
+  display: inline-block;
+  width: 50%;
+}
+
+#product div>img {
+  display: inline-block;
+}
+
+#Monthly {
+  position: fixed;
+  margin: 0;
+  border: 0;
+  left: 125px;
+  bottom: 21px;
+}
+
+#Monthly p {
+  margin-top: 5%;
+  color: rgba(183, 192, 205, 1);
+  font-size: 0.8em;
+}
+
+#Monthly img {
+  width: 100%;
+}
+#chat{
+  flex: 1;
 }

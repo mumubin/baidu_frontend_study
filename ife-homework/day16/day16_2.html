@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" "type="text/css "  href="day5_1.css " />
+</head>
+  <body>
+    <h1>简历</h1>
+    <div class="clearfix ">
+    <header class="baseInfo ">
+      <div id="info ">
+      <h2 class="left ">基本信息</h2>
+      <dl class="right ">
+        <dt>姓名:</dt>
+        <dd>乔小堂</dd>
+        <dt>求职意向:</dt>
+        <dd>软件开发工程师</dd>
+        <dt>电话:</dt>
+        <dd>(+86) 138-0013-8000</dd>
+      </dl>
+      </div>
+      <div id="contact ">
+      <h2 class="left ">联系方式</h2>
+      <dl class="right ">
+        <dt>手机:</dt>
+        <dd>13303712112</dd>
+        <dt>邮箱:</dt>
+        <dd><a href="mailto:service@qiaobutang.com ">service@qiaobutang.com</a></dd>
+        <dt>个人主页:</dt>
+        <dd><a href="http://www.baidu.com ">Github</a></dd>
+      </dl>
+    </div>
+    </header>
+
+    <main>
+      <div id="skill ">
+      <h2 class="left ">技能描述</h2>
+      <dl class="right ">
+        <dt>技术能力</dt>
+        <dd>Oracle，HTML，CSS，JavaScript</dd>
+        <dt>综合能力</dt>
+        <dd>良好的沟通，主动积极，努力勤奋</dd>
+      </dl>
+    </div>
+    <div id="edu ">
+      <h2 class="left ">教育背景</h2>
+      <dl class="right ">
+        <dt>本科</dt>
+        <dd>乔布大学</dd>
+        <dt>硕士</dt>
+        <dd>百度前端技术学院</dd>
+      </dl>
+    </div>
+    <div id="project ">
+      <h2 class="left ">项目经历</h2>
+      <dl class="right ">
+        <dt>智能循迹小车大赛</dt>
+        <dd>以AT89S52单片机作为微控制器，设计出一种简易寻迹小车</dd>
+        <dt>San Doc</dt>
+        <dd>作为文档工程师参与San Doc编写</dd>
+      </dl>
+    </div>
+      <button id="favor">爱好</button>
+    </main>
+  </div>
+
+  <script>
+    function myFavor(){
+      console.log("我的爱好是：电影，旅行");
+    }
+    document.getElementById("favor").addEventListener('click',myFavor)
+  </script>
+  </body>
+</html>

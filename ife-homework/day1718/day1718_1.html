@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>IFE 17-18</title>
+</head>
+
+<body>
+  <input id="first-number" type="number" value="0" placeholder="第一个数字">
+  <input id="second-number" type="number" value="0" placeholder="第二个数字">
+  <button id="add-btn">加</button>
+  <button id="minus-btn">减</button>
+  <button id="times-btn">乘</button>
+  <button id="divide-btn">除</button>
+  <p id="result">运算结果</p>
+  <script>
+    function add() {
+      var first = Number(document.getElementById("first-number").value);
+      var second = Number(document.getElementById("second-number").value);
+      console.log(first);
+      console.log(second);
+      document.getElementById("result").textContent = "运算结果 " + (first + second)
+    }
+
+    function substract() {
+      var first = Number(document.getElementById("first-number").value);
+      var second = Number(document.getElementById("second-number").value);
+      console.log(first);
+      console.log(second);
+      document.getElementById("result").textContent = "运算结果 " + (first - second)
+    }
+
+    function multiply() {
+      var first = Number(document.getElementById("first-number").value);
+      var second = Number(document.getElementById("second-number").value);
+      console.log(first);
+      console.log(second);
+      document.getElementById("result").textContent = "运算结果 " + (first * second)
+    }
+
+    function divide() {
+      var first = Number(document.getElementById("first-number").value);
+      var second = Number(document.getElementById("second-number").value);
+      if(second === 9){
+        console.console.log("The divisor cannot be 0");
+      }
+      document.getElementById("result").textContent = "运算结果 " + (first / second)
+    }
+    document.getElementById("minus-btn").addEventListener('click', substract);
+    document.getElementById("add-btn").addEventListener('click', add);
+    document.getElementById("times-btn").addEventListener('click', multiply);
+    document.getElementById("divide-btn").addEventListener('click', divide);
+  </script>
+</body>
+
+</html>

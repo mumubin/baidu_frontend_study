@@ -2,12 +2,10 @@
 
 |日期|总用时|学习目标|
 |--|--|
-|2018.08.13| 2`h|JavaScript入门|
+|2018.08.13| 2h|JavaScript入门|
 
 ### 学习目标
-- 做好预备奔跑的姿势
-- 开始爱上前端
-- 大概知道什么是Web，什么是HTML，CSS，JavaScript，如果您之前就知道，不妨可以做一些深入阅读
+- JavaScript入门
 
 ### 学习内容
 - [第十六天，开始感受JS的乐趣](http://ife.baidu.com/course/detail/id/45)

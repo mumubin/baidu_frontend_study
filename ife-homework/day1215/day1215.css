@@ -526,3 +526,9 @@ body {
 #user {
   min-height: 80%;
 }
+
+
+#info img{
+  margin-left: 1%;
+  margin-top: 1%;
+}

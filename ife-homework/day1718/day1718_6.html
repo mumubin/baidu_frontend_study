@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>IFE 17-18</title>
+</head>
+
+<body>
+
+  <p id="result">当前时间是？</p>
+  <button id="gen">看答案</button>
+  <script>
+    function greeting() {
+      var date = new Date().getHours();
+      if (date < 12) {
+        var p = document.createElement('p');
+        var text = document.createTextNode('早上好');
+        p.appendChild(text);
+        document.body.appendChild(p);
+      }
+       if (date > 12 && date < 18) {
+        var p = document.createElement('p');
+        var text = document.createTextNode('下午好');
+        p.appendChild(text);
+        document.body.appendChild(p);
+      }
+        if (date > 18 && date <= 24) {
+        var p = document.createElement('p');
+        var text = document.createTextNode('晚上好');
+        p.appendChild(text);
+        document.body.appendChild(p);
+      }
+    }
+    document.addEventListener('click', greeting);
+  </script>
+</body>
+
+</html>

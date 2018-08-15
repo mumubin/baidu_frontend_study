@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>IFE ECMAScript</title>
+
+</head>
+
+<body>
+
+  <button id="trans-btn">数3</button>
+
+  <script>
+    function printPA() {
+      var result = "";
+      for (var i = 1; i < 100; i++) {
+        if (i % 3 === 0) {
+          result += " PA ";
+          continue;
+        }
+        if (i.toString().indexOf('3') !== -1) {
+          result += " PA ";
+          continue;
+        }
+        result += " " + i.toString() + " ";
+
+      }
+      console.log(result);
+    }
+    document.getElementById("trans-btn").addEventListener('click', printPA);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>IFE ECMAScript</title>
+
+</head>
+
+<body>
+
+  <button id="trans-btn">99乘法表</button>
+
+  <script>
+    function printMutliply() {
+      console.log("n * m = t");
+      for (var i = 1; i <= 9; i++) {
+        var result = "";
+        for (var j = 1; j <= i; j++) {
+          result += j.toString() + "*" + i.toString() + "=" + (i * j).toString() + " , ";
+        }
+        console.log(result);
+      }
+    }
+    document.getElementById("trans-btn").addEventListener('click', printMutliply);
+  </script>
+</body>
+
+</html>

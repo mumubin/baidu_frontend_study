@@ -3,9 +3,14 @@
 
 <head>
     <style>
+        body {
+            margin: 0 auto;
+        }
+
         #person {
-            width: 1000px;
-            height: 400px;
+            width: 478px;
+            height: 480px;
+            background-image: url('persons.jpg');
         }
     </style>
 </head>
@@ -13,18 +18,15 @@
 <body>
     <div id="person"></div>
     <script>
-        var url = "persons.jpg";
-        // function animation(ele, position, url) {
-        //     ele.style.backgroundImage = 'url(' + url + ')';
-        //     ele.style.backgroundRepeat = 'no-repeat';
-        // }
-        var position ={}
-        function animation(ele, position, url) {
-            ele.style.backgroundImage = 'url(' + url + ')';
-            ele.style.backgroundRepeat = 'no-repeat';
-        }
-        var ele = document.getElementById("person");
-        window.onload =animation(ele, position, url);
+        window.onload = function () {
+            var ele = document.getElementById("person");
+            var y = 480;
+            function changeY() {
+                ele.style.backgroundPositionY = "-" + y + "px";
+                y>8160?y=480:y+=480;
+            }
+            setInterval(changeY, 100);
+        };    
     </script>
 </body>
 

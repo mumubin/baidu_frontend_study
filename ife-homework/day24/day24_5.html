@@ -1,0 +1,58 @@
+<input id="queue-input" type="text">
+<p id="queue-cont">队列内容：apple-&gt;pear</p>
+<button id="in-btn">入队</button>
+<button id="out-btn">出队</button>
+<button id="font-btn">打印队头元素内容</button>
+<button id="empty-btn">判断队列是否为空</button>
+
+<script>
+
+    var queue = ["apple", "pear"];
+
+    function push(str) {
+        var new_queue = [str];
+        for (var i = 0; i < queue.length; i++) {
+            new_queue.push(queue[i]);
+        }
+        queue = new_queue;
+        printString(new_queue);
+    }
+
+    function remove(str) {
+        debugger;
+        var new_queue = [];
+        for (var i = 0; i < queue.length; i++) {
+            if (queue[i] != str) {
+                new_queue.push(queue[i]);
+            }
+        }
+        queue = new_queue;
+        printString(new_queue);
+    }
+
+    function printString(array) {
+        var result = queue.join("->");
+        document.getElementById("queue-cont").textContent = "队列内容：" + result;
+    }
+
+    document.getElementById("in-btn").addEventListener("click", function () {
+        var str = document.getElementById("queue-input").value;
+        push(str);
+    });
+    document.getElementById("out-btn").addEventListener("click", function () {
+        var str = document.getElementById("queue-input").value;
+        remove(str);
+    });
+
+    document.getElementById("font-btn").addEventListener("click", function () {
+        console.log(queue[0]);
+    });
+
+    document.getElementById("empty-btn").addEventListener("click", function () {
+        if (queue == null || queue.length == 0) {
+            console.log("队列为空");
+        } else {
+            console.log("队列不为空");
+        }
+    });
+</script>

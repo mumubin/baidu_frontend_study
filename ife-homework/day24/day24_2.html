@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+
+    <div>
+        <label>String A:
+            <input id="radio-a" type="radio" checked="true" name="str-obj" value="a">
+        </label>
+        <textarea id="str-a"></textarea>
+        <label>String B:
+            <input id="radio-b" type="radio" name="str-obj" value="b">
+        </label>
+        <textarea id="str-b"></textarea>
+        <label>Num A：<input id="num-a" type="number" value="0"></label>
+        <label>Num B：<input id="num-b" type="number" value="1"></label>
+    </div>
+
+    <div>
+        <button id="button_length">获取当前选中输入的内容长度</button>
+        <button id="button_index">当前选中输入中的第3个字符</button>
+        <button id="button_concat">把两个输入框的文字连接在一起输出（concat）</button>
+        <button id="button_indexOf">输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button>
+        <button id="button_lasrIndexOf">输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）</button>
+        <button id="button_slice">使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button>
+        <button id="button_lineNum">当前选中输入框的行数</button>
+        <button id="button_substr">使用substr获取选中输入框内容的子字符串，参数为num-a及num-b</button>
+        <button id="button_up">把所选输入框中的内容全部转为大写</button>
+        <button id="button_low">把所选输入框中的内容全部转为小写</button>
+        <button id="button_rm">把所选输入框中内容的半角空格全部去除</button>
+        <button id="button_cp">把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        var ARadio = document.getElementById("radio-a");
+        var AStr = document.getElementById("str-a");
+        var BRadio = document.getElementById("radio-b");
+        var BStr = document.getElementById("str-b");
+        var ANum = document.getElementById("num-a");
+        var BNum = document.getElementById("num-b");
+        var result = document.getElementById("result");
+
+        function getCheckedStr() {
+            if (ARadio.checked == true) {
+                return AStr;
+            }
+            if (BRadio.checked == true) {
+                return BStr;
+            }
+        }
+
+        function getLength() {
+            result.textContent = getCheckedStr().value.length;
+        }
+        document.getElementById("button_length").addEventListener("click", getLength);
+
+        function getIndex(i) {
+            var str = getCheckedStr().value;
+            if (str.length > i) {
+                result.textContent = str.charAt(i);
+                return;
+            }
+            var num = i + 1;
+            result.textContent = "当前字符串没有第" + num + "个字符"
+        }
+        document.getElementById("button_index").addEventListener("click", function () {
+            getIndex(2);
+        });
+
+        function getConcat() {
+            result.textContent = AStr.value + BStr.value;
+        }
+
+        document.getElementById("button_concat").addEventListener("click", getConcat);
+
+        function getIndexOf() {
+            result.textContent = AStr.value.indexOf(BStr.value);
+        }
+        document.getElementById("button_indexOf").addEventListener("click", getIndexOf);
+
+
+        function getLastIndexOf() {
+            result.textContent = AStr.value.lastIndexOf(BStr.value);
+        }
+        document.getElementById("button_lasrIndexOf").addEventListener("click", getLastIndexOf);
+
+        function getSlice() {
+            var str = getCheckedStr().value;
+            result.textContent = str.slice(ANum.value, BNum.value);
+        }
+        document.getElementById("button_slice").addEventListener("click", getSlice);
+
+        function getLineNum() {
+            var str = getCheckedStr().value;
+            result.textContent = str.lineCount();
+        }
+        document.getElementById("button_lineNum").addEventListener("click", getLineNum);
+
+        String.prototype.lines = function () { return this.split(/\r*\n/); }
+        String.prototype.lineCount = function () { return this.lines().length; }
+
+        function getSubstr() {
+            var str = getCheckedStr().value;
+            result.textContent = str.substr(ANum.value, BNum.value);
+        }
+        document.getElementById("button_substr").addEventListener("click", getSubstr);
+
+        function getUp() {
+            var str = getCheckedStr().value;
+            result.textContent = str.toUpperCase();
+        }
+        document.getElementById("button_up").addEventListener("click", getUp);
+
+        function getLow() {
+            var str = getCheckedStr().value;
+            result.textContent = str.toLowerCase();
+        }
+        document.getElementById("button_low").addEventListener("click", getLow);
+
+        function getRm() {
+            var str = getCheckedStr().value;
+            getCheckedStr().value = str.replace(" ","");
+        }
+        document.getElementById("button_rm").addEventListener("click", getRm);
+
+        function getCp() {
+            var area = getCheckedStr();
+            if(area.id =="str-a"){
+                BStr.value = getCheckedStr().value;
+            }else{
+                AStr.value = getCheckedStr().value;
+            }
+        }
+        document.getElementById("button_cp").addEventListener("click", getCp);
+
+    </script>
+</body>
+
+</html>

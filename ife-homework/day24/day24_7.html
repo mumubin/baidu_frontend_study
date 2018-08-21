@@ -1,0 +1,94 @@
+<!-- 从小到大 -->
+function compare1(a, b) {
+    if (a < b ) {           // 按某种排序标准进行比较, a 小于 b
+      return -1;
+    }
+    if (a > b ) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  }
+var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+arr.sort(compare1);
+console.log(arr.toString());
+-4,4,27,43,54,58,84,100,140
+
+<!-- 从大到小 -->
+function compare2(a, b) {
+    if (a < b ) {           // 按某种排序标准进行比较, a 小于 b
+      return 1;
+    }
+    if (a > b ) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  }
+  var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+  arr.sort(compare2);
+  console.log(arr.toString());
+  140,100,84,58,54,43,27,4,-4
+
+
+
+  var arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+  <!-- 从小到大 -->
+  <!-- 从大到小 -->
+  <!-- 跟上面一样 -->
+
+
+  var arr = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+  function compare31(a, b) {
+    if (a[1] < b[1] ) {           // 按某种排序标准进行比较, a 小于 b
+      return -1;
+    }
+    if (a[1] > b[1] ) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  }
+
+  function compare32(a, b) {
+    if (a[1] > b[1] ) {           // 按某种排序标准进行比较, a 小于 b
+      return -1;
+    }
+    if (a[1] < b[1] ) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  }
+
+
+  var arr = [
+    {
+        id: 1,
+        name: 'candy',
+        value: 40
+    }, {
+        id: 2,
+        name: 'Simon',
+        value: 50
+    }, {
+        id: 3,
+        name: 'Tony',
+        value: 45
+    }, {
+        id: 4,
+        name: 'Annie',
+        value: 60
+    }
+];
+
+function compare41(a, b) {
+    if (a.value < b.value ) {           // 按某种排序标准进行比较, a 小于 b
+      return -1;
+    }
+    if (a.value> b.value ) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  }

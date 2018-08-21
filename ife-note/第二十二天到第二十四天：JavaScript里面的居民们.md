@@ -6,9 +6,22 @@
 
 ## 学习目标
 
--[MDN 数字](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Math) -[MDN 字符串](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods) -[MDN 对象](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Basics) -[MDN 数组](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
+- [MDN 数字](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Math)
+- [MDN 字符串](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [MDN 对象](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Basics)
+- [MDN 数组](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
 
 ## 学习内容
+
+### Math 函数
+
+| 功能         | 函数          | 示例                                            |
+| ------------ | ------------- | ----------------------------------------------- |
+| 向下取整     | Math.floor()  | Math.floor(1.1)==>1                             |
+| 向上取整     | Math.ceil()   | Math.ceil(1.1) ==>2                             |
+| 四舍五入     | Math.round()  | Math.round(1.1)==>1 Math.round(1.6)==>2         |
+| 保留有效数位 | n.toFixed()   | 1.442.toFixed(2)==>1.44 1.446.toFixed(2)==>1.45 |
+| 随机数       | Math.random() | Math.random()==>0.38078270980122775             |
 
 ### 作业：
 

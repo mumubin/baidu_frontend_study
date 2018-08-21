@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+
+        function diyTrim(str) {
+            var result = str;
+            for (var index = 0; index < str.length; index++) {
+                if (' ' == str.charAt(index) || '　' == str.charAt(index)) {
+                    result = str.substring(index + 1);
+                    continue;
+                }
+                break;
+            }
+            str = result;
+
+            for (var index = str.length - 1; index >= 0; index--) {
+                if (' ' == str.charAt(index) || '　' == str.charAt(index)) {
+                    result = str.substring(0, index);
+                    continue;
+                }
+                break;
+            }
+            return result;
+        }
+        console.log(diyTrim(' a f b    ')); // ->a f b
+        console.log(diyTrim('    ffdaf    ')); // ->ffdaf
+        console.log(diyTrim('1    ')); // ->1 -->
+        console.log(diyTrim('　　f')); // ->f
+        console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
+        console.log(diyTrim(' ')); // ->
+        console.log(diyTrim('　')); // ->
+        console.log(diyTrim('')); // ->
+
+        /*
+去掉字符串str中，连续重复的地方
+*/
+        function removeRepetition(str) {
+            var array = new Array();
+            for (var i = 0; i < str.length; i++) {
+                if(array.length < 1){
+                    array.push(str.charAt(i));
+                    continue;
+                }
+                if(array[array.length-1] == str.charAt(i)){
+                    continue;
+                }
+                array.push(str.charAt(i));
+            }
+            return array.toString();
+        }
+
+        // 测试用例
+        console.log(removeRepetition("aaa")); // ->a
+        console.log(removeRepetition("abbba")); // ->aba
+        console.log(removeRepetition("aabbaabb")); // ->abab
+        console.log(removeRepetition("")); // ->
+        console.log(removeRepetition("abc")); // ->abc
+    </script>
+</body>
+
+</html>

@@ -27,7 +27,7 @@
 
 [Homework](https://github.com/mumubin/baidu_frontend_study/tree/master/ife-homework/day2224)
 
-数组转对象中  严重参考[别人的作业与笔记](https://yuqy96.github.io/baidu-ife/)
+> 最后一题：数组转对象  严重参考[别人的作业与笔记](https://yuqy96.github.io/baidu-ife/)
 
 ## 待深入的知识
 

@@ -1,0 +1,98 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <select id="year-select">
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2018">2018</option>
+        <option value="2032">2032</option>
+    </select>
+
+    <select id="month-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="12">12</option>
+    </select>
+
+    <select id="day-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="31">31</option>
+    </select>
+
+    <select id="hour-select">
+        <option value="0">00</option>
+        <option value="1">01</option>
+        <option value="23">23</option>
+    </select>
+
+    <select id="minite-select">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option>59</option>
+    </select>
+
+    <select id="second-select">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="30">30</option>
+        <option>59</option>
+    </select>
+
+    <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+
+    <script>
+        var yearSelect = document.getElementById("year-select");
+        var monthSelect = document.getElementById("month-select");
+        var daySelect = document.getElementById("day-select");
+        var hourSelect = document.getElementById("hour-select");
+        var miniteSelect = document.getElementById("minite-select");
+        var secondSelect = document.getElementById("second-select");
+        var result = document.getElementById("result-wrapper");
+
+        function buildResult() {
+            var now = new Date();
+            var selectDate = getSelectDate();
+            var join ="还有";
+            if(now > selectDate){
+                join = "已经过去";
+                result.textContent = "现在距离" + selectDate + join + getInterval(now,selectDate);
+                return;
+            }
+            result.textContent = "现在距离" + selectDate + join + getInterval(selectDate,now);
+        }
+
+        function getSelectDate(){
+            return new Date(yearSelect.value, monthSelect.value, daySelect.value, hourSelect.value, miniteSelect.value, secondSelect.value);
+        }
+        function getInterval(newDate,oldDate){
+            var ms = newDate.getTime() - oldDate.getTime();
+            var oneSecond = 1000;
+            var oneMinite = 60*oneSecond;
+            var oneHour = 60*oneMinite;
+            var oneDay = 24*oneHour;
+            var diffDays = Math.floor(ms/oneDay);
+            ms = ms - diffDays*oneDay;
+            var diffHours=  Math.floor(ms/oneHour);
+            ms = ms - diffHours*oneHour;
+            var diffMinites=  Math.floor(ms/oneMinite);
+            ms = ms - diffMinites*oneMinite;
+            var diffSecond=  Math.floor(ms/oneSecond);
+            return diffDays +"天" + diffHours +"小时" + diffMinites +"分钟" + diffSecond +"秒";
+        }
+        window.onload = buildResult;
+
+        document.querySelector("select").addEventListener("change",buildResult);
+
+        // 日期随月份变化就不管了
+    </script>
+</body>
+
+</html>
